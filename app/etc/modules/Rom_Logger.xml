@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rom_Logger>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Rom_Logger>
+    </modules>
+</config>

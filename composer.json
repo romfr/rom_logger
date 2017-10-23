@@ -1,0 +1,9 @@
+{
+   "name": "rom/logger",
+   "type": "magento-module",
+   "description": "Rom Logger",
+   "homepage": "https://github.com/romfr/rom_logger",
+   "require": {
+      "magento-hackathon/magento-composer-installer": "*"
+   }
+}

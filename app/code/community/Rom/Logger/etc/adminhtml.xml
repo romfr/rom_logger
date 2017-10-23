@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <system>
+            <children>
+                <romlogger module="romlogger">
+                    <title>Log overview</title>
+                    <sort_order>100</sort_order>
+                    <action>adminhtml/romlogger_grid/index</action>
+                </romlogger>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <romlogger translate="title" module="romlogger">
+                                <title>Rom Logger</title>
+                                <sort_order>100</sort_order>
+                             </romlogger>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

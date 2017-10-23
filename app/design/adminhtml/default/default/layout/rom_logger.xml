@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_romlogger_grid_index>
+        <reference name="content">
+            <block type="rom_logger/adminhtml_log" name="rom_logger.log"/>
+        </reference>
+    </adminhtml_romlogger_grid_index>
+
+    <adminhtml_romlogger_grid_edit>
+        <reference name="content">
+            <block type="rom_logger/adminhtml_log_edit" name="rom_logger_log_edit"/>
+        </reference>
+    </adminhtml_romlogger_grid_edit>
+</layout>

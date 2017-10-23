@@ -1,0 +1,3 @@
+app/code/community/Rom/Logger app/code/community/Rom/Logger
+app/design/adminhtml/default/default/layout/rom_logger.xml app/design/adminhtml/default/default/layout/rom_logger.xml
+app/etc/modules/Rom_Logger.xml app/etc/modules/Rom_Logger.xml
