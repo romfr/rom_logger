@@ -18,7 +18,6 @@ class Rom_Logger_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     protected function log($message, $additionalData, $module, $level, $references) {
-        Mage::log($this->parseReferences($references));
         Mage::getModel('romlogger/log')->setData(array(
             'message' => $message,
             'additional_data' => $this->parseAdditionalData($additionalData),
