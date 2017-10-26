@@ -23,7 +23,7 @@ $table = $installer->getConnection()
         'nullable'  => true,
         'default'   => null,
         ), 'Log Message')
-    ->addColumn('data', Varien_Db_Ddl_Table::TYPE_TEXT, 1000, array(
+    ->addColumn('additional_data', Varien_Db_Ddl_Table::TYPE_TEXT, 1000, array(
         'nullable'  => true,
         'default'   => null,
         ), 'Log Additional Data')

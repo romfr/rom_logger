@@ -36,14 +36,6 @@ class Rom_Logger_Block_Adminhtml_Log_Edit_Form extends Mage_Adminhtml_Block_Widg
             'maxlength' => '50'
         ));
 
-        $fieldset->addField('reference', 'text', array(
-            'name'      => 'reference',
-            'title'     => $this->__('Reference'),
-            'label'     => $this->__('Reference'),
-            'style'        => 'width:98%;',
-            'required'  => true
-        ));
-
         $fieldset->addField('message', 'text', array(
             'name'      => 'message',
             'title'     => $this->__('Message'),
@@ -51,7 +43,14 @@ class Rom_Logger_Block_Adminhtml_Log_Edit_Form extends Mage_Adminhtml_Block_Widg
             'style'        => 'width:98%;'
         ));
 
-         $fieldset->addField('data', 'textarea', array(
+        $fieldset->addField('reference', 'textarea', array(
+            'name'      => 'reference',
+            'title'     => $this->__('Reference'),
+            'label'     => $this->__('Reference'),
+            'style'     => 'width: 700px; height: 100px;'
+        ));
+
+         $fieldset->addField('additional_data', 'textarea', array(
             'name'      => 'data',
             'title'     => $this->__('Additional data'),
             'label'     => $this->__('Additional data'),
@@ -62,14 +61,33 @@ class Rom_Logger_Block_Adminhtml_Log_Edit_Form extends Mage_Adminhtml_Block_Widg
         return parent::_prepareForm();
     }
 
-    public function getLog()
-    {
-        return Mage::registry('current_log_instance');
+    public function getLog() {
+        $currentLogInstance = Mage::registry('current_log_instance');
+        if ($currentLogInstance->getAdditionalData()) {
+            $currentLogInstance->setAdditionalData(
+                $this->prettifyJson($currentLogInstance->getAdditionalData())
+            );
+        }
+        if ($currentLogInstance->getReference()) {
+            $currentLogInstance->setReference(
+                $this->prettifyJson($currentLogInstance->getReference())
+            );
+        }
+        return $currentLogInstance;
     }
 
-    protected function _initFormValues()
-    {
+    protected function _initFormValues() {
         $this->getForm()->addValues($this->getLog()->getData());
         return parent::_initFormValues();
+    }
+
+    protected function prettifyJson($json) {
+        $prettifiedJson = Zend_Json::prettyPrint($json, array(
+            'format' => 'txt'
+        ));
+        for($i = 1;$i < 5; $i++) {
+            $prettifiedJson = str_replace("\n".str_repeat("\t", $i)."\n", "\n", $prettifiedJson);
+        }
+        return $prettifiedJson;
     }
 }

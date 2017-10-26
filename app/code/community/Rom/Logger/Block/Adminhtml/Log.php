@@ -5,7 +5,7 @@ class Rom_Logger_Block_Adminhtml_Log extends Mage_Adminhtml_Block_Widget_Grid_Co
     public function __construct() {
         $this->_blockGroup = 'rom_logger';
         $this->_controller = 'adminhtml_log';
-        $this->_headerText = $this->__('Romlogger logs');
+        $this->_headerText = $this->__('Backend Logger');
         parent::__construct();
     }
 
