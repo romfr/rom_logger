@@ -13,4 +13,18 @@ class Rom_Logger_Model_Resource_Log extends Mage_Core_Model_Resource_Db_Abstract
         $data = parent::_prepareDataForSave($object);
         return $data;
     }
+
+    public function clean($logLevel, $logDurationInDays) {
+        $readAdapter    = $this->_getReadAdapter();
+        $writeAdapter   = $this->_getWriteAdapter();
+
+        $logDurationInSeconds =  $logDurationInDays * 60 * 60 * 24;
+        $timeLimit = $this->formatDate(Mage::getModel('core/date')->gmtTimestamp() - $logDurationInSeconds);
+
+        $condition = array(
+            'created_at < (?)' => $timeLimit,
+            'level = (?)' => $logLevel
+        );
+        $writeAdapter->delete($this->getTable('rom_logger/log'), $condition);
+    }
 }

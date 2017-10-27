@@ -54,6 +54,42 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </debug>
+                        <clean_error_log_days>
+                            <label>Keep error log for x days</label>
+                            <comment>Error log entries which are older then x days will be removed</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>500</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </clean_error_log_days>
+                        <clean_warning_log_days>
+                            <label>Keep warning log for x days</label>
+                            <comment>Warning log entries which are older then x days will be removed</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>600</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </clean_warning_log_days>
+                        <clean_info_log_days>
+                            <label>Keep info log for x days</label>
+                            <comment>Info log entries which are older then x days will be removed</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>700</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </clean_info_log_days>
+                        <clean_debug_log_days>
+                            <label>Keep debug log for x days</label>
+                            <comment>Debug log entries which are older then x days will be removed</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>800</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </clean_debug_log_days>
                     </fields>
                 </database>
                 <file translate="label">

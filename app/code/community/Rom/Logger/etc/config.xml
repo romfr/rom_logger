@@ -61,6 +61,18 @@
             </updates>
         </layout>
     </adminhtml>
+    <crontab>
+        <jobs>
+            <rom_logger_clean_log>
+                <schedule>
+                    <cron_expr>0 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>rom_logger/crontab::cleanLog</model>
+                </run>
+            </rom_logger_clean_log>
+        </jobs>
+    </crontab>
     <default>
         <rom_logger>
             <database>
@@ -68,6 +80,10 @@
                 <warning>1</warning>
                 <info>1</info>
                 <debug>0</debug>
+                <clean_error_log_days>90</clean_error_log_days>
+                <clean_warning_log_days>60</clean_warning_log_days>
+                <clean_info_log_days>30</clean_info_log_days>
+                <clean_debug_log_days>7</clean_debug_log_days>
             </database>
             <file>
                 <error>1</error>
