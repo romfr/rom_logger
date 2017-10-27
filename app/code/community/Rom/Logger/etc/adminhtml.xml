@@ -20,7 +20,15 @@
                             <romlogger translate="title" module="romlogger">
                                 <title>Backend Logger</title>
                                 <sort_order>100</sort_order>
-                             </romlogger>
+                            </romlogger>
+                            <config>
+                                <children>
+                                    <rom_logger translate="title">
+                                        <title>Backend Logger</title>
+                                        <sort_order>100</sort_order>
+                                    </rom_logger>
+                                </children>
+                            </config>
                         </children>
                     </system>
                 </children>

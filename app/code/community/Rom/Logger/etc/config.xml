@@ -61,4 +61,22 @@
             </updates>
         </layout>
     </adminhtml>
+    <default>
+        <rom_logger>
+            <database>
+                <error>1</error>
+                <warning>1</warning>
+                <info>1</info>
+                <debug>0</debug>
+            </database>
+            <file>
+                <error>1</error>
+                <warning>1</warning>
+                <info>1</info>
+                <debug>1</debug>
+                <log_reference>1</log_reference>
+                <log_additional_data>0</log_additional_data>
+            </file>
+        </rom_logger>
+    </default>
 </config>
