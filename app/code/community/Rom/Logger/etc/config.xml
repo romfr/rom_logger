@@ -7,18 +7,18 @@
     </modules>
     <global>
         <models>
-            <romlogger>
+            <rom_logger>
                 <class>Rom_Logger_Model</class>
-                <resourceModel>romlogger_resource</resourceModel>
-            </romlogger>
-            <romlogger_resource>
+                <resourceModel>rom_logger_resource</resourceModel>
+            </rom_logger>
+            <rom_logger_resource>
                 <class>Rom_Logger_Model_Resource</class>
                 <entities>
                     <log>
-                        <table>romlogger_log</table>
+                        <table>rom_logger_log</table>
                     </log>
                 </entities>
-            </romlogger_resource>
+            </rom_logger_resource>
         </models>
         <blocks>
             <rom_logger>
@@ -26,19 +26,19 @@
             </rom_logger>
         </blocks>
         <helpers>
-            <romlogger>
+            <rom_logger>
                 <class>Rom_Logger_Helper</class>
-            </romlogger>
+            </rom_logger>
         </helpers>
         <resources>
-            <romlogger_setup>
+            <rom_logger_setup>
                 <setup>
                     <module>Rom_Logger</module>
                 </setup>
                 <connection>
                     <use>core_setup</use>
                 </connection>
-            </romlogger_setup>
+            </rom_logger_setup>
         </resources>
     </global>
     <admin>
@@ -46,7 +46,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <romlogger before="Mage_Adminhtml">Rom_Logger_Adminhtml</romlogger>
+                        <rom_logger before="Mage_Adminhtml">Rom_Logger_Adminhtml</rom_logger>
                     </modules>
                 </args>
             </adminhtml>
@@ -55,9 +55,9 @@
     <adminhtml>
         <layout>
             <updates>
-                <romlogger>
+                <rom_logger>
                     <file>rom_logger.xml</file>
-                </romlogger>
+                </rom_logger>
             </updates>
         </layout>
     </adminhtml>

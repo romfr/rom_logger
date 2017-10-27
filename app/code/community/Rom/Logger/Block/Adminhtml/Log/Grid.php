@@ -3,7 +3,7 @@ class Rom_Logger_Block_Adminhtml_Log_Grid extends Mage_Adminhtml_Block_Widget_Gr
 {
     public function __construct() {
         parent::__construct();
-        $this->setId('romlogger_grid');
+        $this->setId('rom_logger_grid');
         $this->setUseAjax(true);
         $this->setDefaultSort('created_at');
         $this->setDefaultDir('DESC');
@@ -11,7 +11,7 @@ class Rom_Logger_Block_Adminhtml_Log_Grid extends Mage_Adminhtml_Block_Widget_Gr
     }
 
     protected function _prepareCollection() {
-        $collection = Mage::getSingleton('romlogger/log')->getCollection();
+        $collection = Mage::getSingleton('rom_logger/log')->getCollection();
         $this->setCollection($collection);
         return parent::_prepareCollection();
     }
@@ -34,7 +34,7 @@ class Rom_Logger_Block_Adminhtml_Log_Grid extends Mage_Adminhtml_Block_Widget_Gr
                 'index'    => 'module',
                 'sortable' => true,
                 'type'     => 'options',
-                'options'  => Mage::getModel('romlogger/log')->getAllModules(),
+                'options'  => Mage::getModel('rom_logger/log')->getAllModules(),
                 'width'    => '10%'
             )
         );
@@ -57,7 +57,7 @@ class Rom_Logger_Block_Adminhtml_Log_Grid extends Mage_Adminhtml_Block_Widget_Gr
                 'index'    => 'level',
                 'sortable' => true,
                 'type'     => 'options',
-                'options'  => Mage::getModel('romlogger/log')->getAllLevels(),
+                'options'  => Mage::getModel('rom_logger/log')->getAllLevels(),
                 'width'    => '10%'
             )
         );
@@ -79,6 +79,6 @@ class Rom_Logger_Block_Adminhtml_Log_Grid extends Mage_Adminhtml_Block_Widget_Gr
     }
 
     public function getGridUrl() {
-        return $this->getUrl('adminhtml/romlogger_grid/grid', array('_current' => true));
+        return $this->getUrl('adminhtml/rom_logger_grid/grid', array('_current' => true));
     }
 }

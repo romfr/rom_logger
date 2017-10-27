@@ -14,6 +14,6 @@ class Rom_Logger_Block_Adminhtml_Log_Edit extends Mage_Adminhtml_Block_Widget_Fo
 
     public function getHeaderText()
     {
-        return Mage::helper('romlogger')->__("Backend Log details");
+        return Mage::helper('rom_logger')->__("Backend Log details");
     }
 }

@@ -7,7 +7,7 @@ class Rom_Logger_Model_Log extends Mage_Core_Model_Abstract
     const LEVEL_DEBUG = 'debug';
 
     protected function _construct() {
-        $this->_init("romlogger/log");
+        $this->_init("rom_logger/log");
     }
 
     public function getAllLevels() {
@@ -20,7 +20,7 @@ class Rom_Logger_Model_Log extends Mage_Core_Model_Abstract
     }
 
     public function getAllModules() {
-        $collection = Mage::getModel('romlogger/log')
+        $collection = Mage::getModel('rom_logger/log')
             ->getCollection()
             ->addFieldToSelect('module');
         $collection->getSelect()->group('module');

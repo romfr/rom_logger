@@ -1,5 +1,5 @@
 <?php
-class Rom_Logger_Adminhtml_Romlogger_GridController extends Mage_Adminhtml_Controller_Action
+class Rom_Logger_Adminhtml_RomLogger_GridController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction() {
         $this->loadLayout();
@@ -21,7 +21,7 @@ class Rom_Logger_Adminhtml_Romlogger_GridController extends Mage_Adminhtml_Contr
     protected function _initLog()
     {
         $id = $this->getRequest()->getParam('id', null);
-        $log = Mage::getModel('romlogger/log')->load($id);
+        $log = Mage::getModel('rom_logger/log')->load($id);
         Mage::register('current_log_instance', $log);
         return $log;
     }

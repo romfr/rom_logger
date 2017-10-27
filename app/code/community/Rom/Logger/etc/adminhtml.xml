@@ -3,11 +3,11 @@
     <menu>
         <system>
             <children>
-                <romlogger module="romlogger">
+                <rom_logger module="rom_logger">
                     <title>Backend Logger</title>
                     <sort_order>100</sort_order>
-                    <action>adminhtml/romlogger_grid/index</action>
-                </romlogger>
+                    <action>adminhtml/romLogger_grid/index</action>
+                </rom_logger>
             </children>
         </system>
     </menu>
@@ -17,10 +17,10 @@
                 <children>
                     <system>
                         <children>
-                            <romlogger translate="title" module="romlogger">
+                            <rom_logger translate="title" module="rom_logger">
                                 <title>Backend Logger</title>
                                 <sort_order>100</sort_order>
-                            </romlogger>
+                            </rom_logger>
                             <config>
                                 <children>
                                     <rom_logger translate="title">

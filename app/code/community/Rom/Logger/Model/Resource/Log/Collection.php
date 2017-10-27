@@ -3,6 +3,6 @@ class Rom_Logger_Model_Resource_Log_Collection extends Mage_Core_Model_Resource_
 {
     protected function _construct()
     {
-        $this->_init('romlogger/log');
+        $this->_init('rom_logger/log');
     }
 }
