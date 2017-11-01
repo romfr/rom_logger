@@ -31,3 +31,7 @@ public function logError($message, $additionalData = null, $module = null, $refe
 ## Backend/Admin grid view
 
 ![Admin grid screenshot](https://raw.github.com/romfr/rom_logger/master/doc/screenshots/grid.png)
+
+## Backend/Admin detail view
+
+![Admin detail view screenshot](https://raw.github.com/romfr/rom_logger/master/doc/screenshots/detail.png)
