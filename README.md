@@ -27,3 +27,7 @@ public function logError($message, $additionalData = null, $module = null, $refe
 ## Configuration
 
 ![Configuration area screenshot](https://raw.github.com/romfr/rom_logger/master/doc/screenshots/configuration-area.png)
+
+## Backend/Admin grid view
+
+![Admin grid screenshot](https://raw.github.com/romfr/rom_logger/master/doc/screenshots/grid.png)
